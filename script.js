@@ -3,6 +3,8 @@ const result = document.querySelector(".results");
 
 let computerChoise;
 let playerChoise;
+let playerPoints = 0
+let computerPoints = 0
 let results;
 
 let buttons = document.querySelectorAll(".playerChoise")
@@ -13,6 +15,7 @@ function gameSettings(){
   result.innerHTML = ""
   results = gameRound(randomComputerChoise(), setPlayerChoise(this))
   showResults(results)
+  endGame()
 }
 function setPlayerChoise(choise){
   playerChoise = choise.id
@@ -31,23 +34,29 @@ function gameRound(computer, player) {
   } else {
     //computer == rock
     if (computer == "Rock" && player == "Paper") {
+      playerPoints++
       return "Player won! Paper beats Rock"
     }
     if (computer == "Rock" && player == "Scissors") {
+      computerPoints++
       return "Computer won! Rock beats Scissors"
     }
     //computer == paper
     if (computer == "Paper" && player == "Rock") {
+      computerPoints++
       return "Computer won! Paper beats Rock"
     }
     if (computer == "Paper" && player == "Scissors") {
-      return "Computer won! Rock beats Scissors"
+      playerPoints++
+      return "Player won! Scissors beats Paper"
     }
     //computer == scissors
     if (computer == "Scissors" && player == "Rock") {
+      playerPoints++
       return "Player won! Rock beats Scissors"
     }
     if (computer == "Scissors" && player == "Paper") {
+      computerPoints++
       return "Computer won! Scissors beats Paper"
     }
   }
@@ -56,4 +65,8 @@ function gameRound(computer, player) {
 function showResults(results){
   result.innerHTML += `<BR> Player choose ${playerChoise} <BR> Computer choose ${computerChoise}<BR>` 
   result.innerHTML += `${results}`
+}
+
+function endGame(){
+
 }
