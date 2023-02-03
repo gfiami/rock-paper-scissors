@@ -85,4 +85,4 @@ for(i=0; i<buttons.length; i++){
   buttons[i].disabled = 'true'
 }
 finalResult.innerHTML += " <br> <button onclick='window.location.reload()'>Restart</button>"
-}}
+}}//teste
