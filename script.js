@@ -1,21 +1,27 @@
 const Options = new Array("Rock", "Paper", "Scissors");
-let buttons = document.querySelectorAll(".playerChoice")
-for(i=0; i<buttons.length; i++){
-  buttons[i].addEventListener('click', setPlayerChoice)
-}
-let playerChoice;
+let computerChoise;
+let playerChoise;
 
-function setPlayerChoice(){
-  playerChoice = this.id
+let buttons = document.querySelectorAll(".playerChoise")
+for(i=0; i<buttons.length; i++){
+  buttons[i].addEventListener('click', gameSettings)
 }
-let computerChoice;
-function randomComputerChoice() {
+function gameSettings(){
+  gameRound(randomComputerChoise(), setPlayerChoise(this))
+}
+function setPlayerChoise(choise){
+  playerChoise = choise.id
+  return playerChoise
+}
+
+function randomComputerChoise() {
   I = Math.floor(Math.random() * 3);
-  computerChoice = Options[I];
-  return computerChoice;
+  computerChoise = Options[I];
+  return computerChoise;
 }
 
 function gameRound(computer, player) {
+  console.log(`You choose ${player}`)
   console.log(`Computer choose ${computer}`);
   if (computer == player) {
     console.log("It's a tie!");
@@ -43,5 +49,4 @@ function gameRound(computer, player) {
     }
   }
 }
-console.log(`Your hand is ${playerChoice}`);
-gameRound(randomComputerChoice(), playerChoice);
+
