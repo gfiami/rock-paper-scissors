@@ -74,15 +74,15 @@ point.innerHTML = ` <BR> Computer Points: ${computerPoints} <BR> Player Points: 
 }
 function endGame(){
 if(computerPoints == 5){
-  for(i=0; i<buttons.length; i++){
-    buttons[i].disabled = 'true'
-  }
   finalResult.innerHTML = "The Computer has 5 points :( Player Lost"
 }
 if(playerPoints == 5){
-  for(i=0; i<buttons.length; i++){
-    buttons[i].disabled = 'true'
-  }
   finalResult.innerHTML = "Player has 5 points :) You won!"
 }
+
+if((playerPoints == 5 || computerPoints == 5)){
+for(i=0; i<buttons.length; i++){
+  buttons[i].disabled = 'true'
 }
+finalResult.innerHTML += " <br> <button onclick='window.location.reload()'>Restart</button>"
+}}
