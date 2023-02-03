@@ -1,6 +1,6 @@
 const Options = new Array("Rock", "Paper", "Scissors");
 let computerChoice;
-let playerChoice = "Rock"; //change this to "Rock", "Paper" or "Scissors" (not case sensitive)
+let playerChoice = "Rock"; //change this to "Rock", "Paper" or "Scissors" (case sensitive)
 function randomComputerChoice() {
   I = Math.floor(Math.random() * 3);
   computerChoice = Options[I];
