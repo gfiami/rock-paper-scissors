@@ -1,5 +1,7 @@
 const Options = new Array("Rock", "Paper", "Scissors");
 const result = document.querySelector(".results");
+const point = document.querySelector(".points")
+const finalResult = document.querySelector(".finalResult")
 
 let computerChoise;
 let playerChoise;
@@ -15,6 +17,7 @@ function gameSettings(){
   result.innerHTML = ""
   results = gameRound(randomComputerChoise(), setPlayerChoise(this))
   showResults(results)
+  showPoints()
   endGame()
 }
 function setPlayerChoise(choise){
@@ -66,7 +69,20 @@ function showResults(results){
   result.innerHTML += `<BR> Player choose ${playerChoise} <BR> Computer choose ${computerChoise}<BR>` 
   result.innerHTML += `${results}`
 }
-
+function showPoints(){
+point.innerHTML = ` <BR> Computer Points: ${computerPoints} <BR> Player Points: ${playerPoints}`
+}
 function endGame(){
-
+if(computerPoints == 5){
+  for(i=0; i<buttons.length; i++){
+    buttons[i].disabled = 'true'
+  }
+  finalResult.innerHTML = "The Computer has 5 points :( Player Lost"
+}
+if(playerPoints == 5){
+  for(i=0; i<buttons.length; i++){
+    buttons[i].disabled = 'true'
+  }
+  finalResult.innerHTML = "Player has 5 points :) You won!"
+}
 }
