@@ -1,6 +1,14 @@
 const Options = new Array("Rock", "Paper", "Scissors");
+let buttons = document.querySelectorAll(".playerChoice")
+for(i=0; i<buttons.length; i++){
+  buttons[i].addEventListener('click', setPlayerChoice)
+}
+let playerChoice;
+
+function setPlayerChoice(){
+  playerChoice = this.id
+}
 let computerChoice;
-let playerChoice = window.prompt("Choose Rock, Paper or Scissors"); //change this to "Rock", "Paper" or "Scissors" (case sensitive)
 function randomComputerChoice() {
   I = Math.floor(Math.random() * 3);
   computerChoice = Options[I];
