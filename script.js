@@ -1,6 +1,7 @@
 const Options = new Array("Rock", "Paper", "Scissors");
 const result = document.querySelector(".results");
-const point = document.querySelector(".points")
+const pPoints = document.querySelector(".playerPoints")
+const cPoints = document.querySelector(".computerPoints")
 const finalResult = document.querySelector(".finalResult")
 const startMessage = document.querySelector(".startMessage")
 const game = document.querySelector(".game")
@@ -76,7 +77,8 @@ function showResults(results){
   result.innerHTML += `${results}`
 }
 function showPoints(){
-point.innerHTML = ` <BR> Computer Points: ${computerPoints} <BR> Player Points: ${playerPoints}`
+  pPoints.innerHTML = ` Player - <b>${playerPoints}</b>`
+  cPoints.innerHTML = ` <b>${computerPoints}</b> - Computer`
 }
 function endGame(){
 if(computerPoints == 5){
