@@ -1,5 +1,7 @@
 const Options = new Array("Rock", "Paper", "Scissors");
 const result = document.querySelector(".results");
+const pResult = document.querySelector(".playerResults");
+const cResult = document.querySelector(".computerResults")
 const pPoints = document.querySelector(".playerPoints")
 const cPoints = document.querySelector(".computerPoints")
 const finalResult = document.querySelector(".finalResult")
@@ -72,13 +74,14 @@ function gameRound(computer, player) {
   }
 }
 
-function showResults(results){
-  result.innerHTML += `<BR> Player choose ${playerChoise} <BR> Computer choose ${computerChoise}<BR>` 
-  result.innerHTML += `${results}`
-}
 function showPoints(){
   pPoints.innerHTML = ` Player - <b>${playerPoints}</b>`
   cPoints.innerHTML = ` <b>${computerPoints}</b> - Computer`
+}
+function showResults(results){
+  pResult.innerHTML = `Player - <b>${playerChoise}</b> `
+  cResult.innerHTML = `<b>${computerChoise}</b> - Computer`
+  result.innerHTML = `${results}`
 }
 function endGame(){
 if(computerPoints == 5){
@@ -92,5 +95,5 @@ if((playerPoints == 5 || computerPoints == 5)){
 for(i=0; i<buttons.length; i++){
   buttons[i].disabled = 'true'
 }
-finalResult.innerHTML += " <br> <button onclick='window.location.reload()'>Restart</button>"
+finalResult.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Restart</button>"
 }}

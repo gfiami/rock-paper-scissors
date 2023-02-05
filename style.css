@@ -18,8 +18,27 @@
     display: flex;
     justify-content: space-around;
 }
+.resultsContainer{
+    margin: auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
 .playerChoise{
     height: 15vh;
     width: 15vw;
 
+}
+.results{
+    font-size: large;
+    font-weight: bolder;
+}
+.finalResult{
+    color: red;
+
+}
+.restartButton{
+    height: 5vh;
+    width: 5vw;
+    margin-top: 2vh;
 }
