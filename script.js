@@ -2,7 +2,13 @@ const Options = new Array("Rock", "Paper", "Scissors");
 const result = document.querySelector(".results");
 const point = document.querySelector(".points")
 const finalResult = document.querySelector(".finalResult")
+const startMessage = document.querySelector(".startMessage")
+const game = document.querySelector(".game")
 
+function startGame(){
+  startMessage.style.display = 'none'
+  game.style.display = 'block'
+}
 let computerChoise;
 let playerChoise;
 let playerPoints = 0
@@ -85,4 +91,4 @@ for(i=0; i<buttons.length; i++){
   buttons[i].disabled = 'true'
 }
 finalResult.innerHTML += " <br> <button onclick='window.location.reload()'>Restart</button>"
-}}//teste
+}}

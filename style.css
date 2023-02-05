@@ -1,0 +1,7 @@
+.title, .startMessage{
+    text-align: center;
+}
+
+.game{
+    display:none;
+}

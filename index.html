@@ -8,16 +8,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Rock, Paper, Scissors game!</h1>
-    <h2>Whoever scores 5 points first wins
-    </h2>
-    <h3>Select an option</h3>
-    <button class='playerChoise'id="Rock">Rock</button>
-    <button class='playerChoise'id="Paper">Paper</button>
-    <button class='playerChoise'id="Scissors">Scissors</button>
-    <div class="points"></div>
-    <div class="results"></div>
-    <div ><h3 class="finalResult"></h3></div>
+    <h1 class="title">Rock, Paper, Scissors game!</h1>  <h2 class="title">Humans vs Computers</h2><br>
+    <div class="startMessage">
+      <p>Oh no! The computers are trying to dominate humans :(</p>
+      <small> (I'm not actually sad since I'm a computer)</small> <br> <br>
+      <p> After much negotiating a deal was made... A Rock Paper Scissors game will define the future of this planet! </p>
+    <p> Whoever scores 5 points first wins the right to rule Earth! You were chosen to play for the humans. Are you ready???</p>
+    <button class="readyButton" onclick="startGame()"> I'M READY!</button></div>
+    
+    <div class="game">    
+      <h2>Whoever scores 5 points first wins
+      </h2>
+      <h3>Select an option</h3>
+      <button class='playerChoise'id="Rock">Rock</button>
+      <button class='playerChoise'id="Paper">Paper</button>
+      <button class='playerChoise'id="Scissors">Scissors</button>
+      <div class="points"></div>
+      <div class="results"></div>
+      <div ><h3 class="finalResult"></h3></div></div>
+
     <script src="./script.js"></script>
   </body>
 </html>
