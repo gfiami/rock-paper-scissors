@@ -5,6 +5,7 @@ const cResult = document.querySelector(".computerResults")
 const pPoints = document.querySelector(".playerPoints")
 const cPoints = document.querySelector(".computerPoints")
 const finalResult = document.querySelector(".finalResult")
+const finalResult2 = document.querySelector(".finalResult2")
 const startMessage = document.querySelector(".startMessage")
 const game = document.querySelector(".game")
 
@@ -85,15 +86,20 @@ function showResults(results){
 }
 function endGame(){
 if(computerPoints == 5){
-  finalResult.innerHTML = "The Computer has 5 points :( Player Lost"
+  finalResult.innerHTML = "The Computer has 5 points :( <br> Player Lost... The age of man has come to an end."
+  finalResult2.innerHTML = "<small>Trust me! Click the button and we will time travel and try again!!</small>"
+  finalResult2.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Time Travel!</button>"
+
 }
 if(playerPoints == 5){
-  finalResult.innerHTML = "Player has 5 points :) You won!"
+  finalResult.innerHTML = "Player has 5 points :) <br> You won!"
+  finalResult2.innerHTML = "<small>Give the computers another chance?</small>"
+  finalResult2.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Another Chance</button>"
+
 }
 
 if((playerPoints == 5 || computerPoints == 5)){
 for(i=0; i<buttons.length; i++){
   buttons[i].disabled = 'true'
 }
-finalResult.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Restart</button>"
 }}

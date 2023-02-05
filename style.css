@@ -5,7 +5,10 @@
 .title, .startMessage, .game{
     text-align: center;
 }
-
+.readyButton{
+    height: 10vh;
+    width: 10vw;
+}
 .game{
     display:none;
 }
@@ -39,10 +42,16 @@
 }
 .finalResult{
     color: red;
+    margin-bottom: 0;
+
+}
+.finalResult2{
+    margin: 1px;
 
 }
 .restartButton{
     height: 5vh;
     width: 5vw;
-    margin-top: 2vh;
+    margin-top: 1vh;
+ 
 }
