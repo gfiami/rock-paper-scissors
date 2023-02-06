@@ -52,13 +52,35 @@ function gameSettings(){
 }
 function setPlayerChoise(choise){
   playerChoise = choise.id
+  switch(playerChoise){
+    case 'Rock':
+      playerChoise = rockPlayer;
+      break;
+    case 'Paper':
+      playerChoise = paperPlayer;
+      break;
+    case 'Scissors':
+      playerChoise = scissorsPlayer;
+      break;
+  }
   return playerChoise
 }
 
 function randomComputerChoise() {
   I = Math.floor(Math.random() * 3);
   computerChoise = Options[I];
-  return computerChoise;
+  switch(computerChoise){
+    case 'Rock':
+      computerChoise = rockComputer;
+      break;
+    case 'Paper':
+      computerChoise = paperComputer;
+      break;
+    case 'Scissors':
+      computerChoise = scissorsComputer;
+      break;
+}
+return computerChoise;
 }
 
 function gameRound(computer, player) {
@@ -100,8 +122,10 @@ function showPoints(){
   cPoints.innerHTML = ` <b>${computerPoints}</b> - Computer`
 }
 function showResults(results){
-  pResult.innerHTML = `Player - <b>${playerChoise}</b> `
-  cResult.innerHTML = `<b>${computerChoise}</b> - Computer`
+  pResult.innerHTML = `Player <br>`
+  pResult.appendChild(playerChoise)
+  cResult.innerHTML = `Computer <br>`
+  cResult.appendChild(computerChoise)
   result.innerHTML = `${results}`
 }
 function endGame(){
