@@ -8,6 +8,7 @@ const finalResult = document.querySelector(".finalResult")
 const finalResult2 = document.querySelector(".finalResult2")
 const startMessage = document.querySelector(".startMessage")
 const game = document.querySelector(".game")
+//create node for each type of hand
 const rockComputer = document.createElement("img")
 rockComputer.setAttribute('src', './images/rock.jpg')
 rockComputer.setAttribute('class', 'handImages')
