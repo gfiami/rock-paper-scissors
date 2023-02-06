@@ -36,6 +36,10 @@
     width: 15vw;
 
 }
+.handImages{
+    width: 23%;
+    height: auto;
+}
 .results{
     font-size: large;
     font-weight: bolder;
