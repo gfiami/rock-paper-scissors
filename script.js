@@ -151,3 +151,8 @@ for(i=0; i<buttons.length; i++){
   buttons[i].style.display = 'none'
 }
 }}
+
+function showRules(){
+  console.log('i')
+  window.alert('Paper beats x')
+}

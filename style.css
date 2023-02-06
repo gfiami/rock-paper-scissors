@@ -8,6 +8,8 @@
 .readyButton{
     height: 8vh;
     width: 18vw;
+    min-width: fit-content;
+
 }
 .game{
     display:none;
@@ -21,7 +23,7 @@
 }
 .pointsContainer{
     margin: auto;
-    font-size: 120%;
+    font-size: 115%;
     width: 60%;
     display: flex;
     justify-content: space-around;
@@ -61,4 +63,23 @@
     width: 18vw;
     margin-top: 1vh;
  
+}
+
+.rulesContainer{
+    display:none;
+}
+
+.rules{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 0.5%;
+    border: solid black 1px;
+}
+.rules:hover{
+    background-color: white;
+    content: url(./images/simple-rules.png);
+    display: block;
+    width: 50%;
+    height: auto;
 }
