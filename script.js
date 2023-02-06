@@ -63,7 +63,7 @@ function setPlayerChoise(choise){
       playerChoise = scissorsPlayer;
       break;
   }
-  return playerChoise
+  return choise.id
 }
 
 function randomComputerChoise() {
@@ -80,7 +80,7 @@ function randomComputerChoise() {
       computerChoise = scissorsComputer;
       break;
 }
-return computerChoise;
+return Options[I];
 }
 
 function gameRound(computer, player) {
