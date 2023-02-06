@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(212, 208, 208);
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .title, .startMessage, .game{
     text-align: center;
@@ -36,13 +41,13 @@
 }
 .playerChoise{
     font-size: 2em;
-    height: 18vh;
-    width: 12vw;
+    height: 15vh;
+    width: 10vw;
     min-width: fit-content;
 
 }
 .handImages{
-    width: 50%;
+    width: 14vw;
     height: auto;
 }
 .results{
@@ -81,5 +86,10 @@
     content: url(./images/simple-rules.png);
     display: block;
     width: 50%;
+    height: auto;
+}
+
+.finalGif{
+    width: 20vw;
     height: auto;
 }

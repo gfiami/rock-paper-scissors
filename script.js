@@ -8,7 +8,15 @@ const finalResult = document.querySelector(".finalResult")
 const finalResult2 = document.querySelector(".finalResult2")
 const startMessage = document.querySelector(".startMessage")
 const game = document.querySelector(".game")
+const gif = document.querySelector(".finalGifContainer")
+const finalGifComputer = document.createElement("img")
+finalGifComputer.setAttribute('src', './images/evilcomputer.gif')
+finalGifComputer.setAttribute('class', 'finalGif')
+const finalGifPlayer = document.createElement("img")
+finalGifPlayer.setAttribute('src', './images/playerWon.gif')
+finalGifPlayer.setAttribute('class', 'finalGif')
 //create node for each type of hand
+
 const rockComputer = document.createElement("img")
 rockComputer.setAttribute('src', './images/rock.jpg')
 rockComputer.setAttribute('class', 'handImages')
@@ -133,13 +141,13 @@ if(computerPoints == 5){
   finalResult.innerHTML = "The Computer has 5 points :( <br> Player Lost... The age of men has come to an end."
   finalResult2.innerHTML = "<small>Trust me! Click the button and we will time travel and try again!!</small>"
   finalResult2.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Time Travel!</button>"
-
+  gif.appendChild(finalGifComputer)
 }
 if(playerPoints == 5){
   finalResult.innerHTML = "Player has 5 points :) <br> You won!"
   finalResult2.innerHTML = "<small>Give the computers another chance?</small>"
   finalResult2.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Another Chance</button>"
-
+  gif.appendChild(finalGifPlayer)
 }
 const gameSubtitle = document.querySelectorAll('.gameSubtitle')
 
