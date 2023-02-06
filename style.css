@@ -31,7 +31,13 @@ button:hover {
     font-size: 115%;
     width: 60%;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+}
+.computerPoints{
+    margin-left: 10%;
+}
+.playerPoints{
+    margin-right: 10%;
 }
 .resultsContainer{
     margin: auto;

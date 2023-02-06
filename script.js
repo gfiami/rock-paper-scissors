@@ -8,6 +8,7 @@ const finalResult = document.querySelector(".finalResult")
 const finalResult2 = document.querySelector(".finalResult2")
 const startMessage = document.querySelector(".startMessage")
 const game = document.querySelector(".game")
+let roundCounter = 0;
 const gif = document.querySelector(".finalGifContainer")
 const finalGifComputer = document.createElement("img")
 finalGifComputer.setAttribute('src', './images/evilcomputer.gif')
@@ -92,6 +93,7 @@ return Options[I];
 }
 
 function gameRound(computer, player) {
+  roundCounter++
   if (computer == player) {
     return "It's a tie!"
   } else {
@@ -134,7 +136,8 @@ function showResults(results){
   pResult.appendChild(playerChoise)
   cResult.innerHTML = ''
   cResult.appendChild(computerChoise)
-  result.innerHTML = `${results}`
+  result.innerHTML = ` Round ${roundCounter} <br> ${results}`
+
 }
 function endGame(){
 if(computerPoints == 5){
