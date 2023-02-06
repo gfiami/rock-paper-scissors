@@ -118,19 +118,19 @@ function gameRound(computer, player) {
 }
 
 function showPoints(){
-  pPoints.innerHTML = ` Player - <b>${playerPoints}</b>`
-  cPoints.innerHTML = ` <b>${computerPoints}</b> - Computer`
+  pPoints.innerHTML = ` Player <br> <b>${playerPoints}</b>`
+  cPoints.innerHTML = ` Computer <br> <b>${computerPoints}</b> `
 }
 function showResults(results){
-  pResult.innerHTML = `Player <br>`
+  pResult.innerHTML = ''
   pResult.appendChild(playerChoise)
-  cResult.innerHTML = `Computer <br>`
+  cResult.innerHTML = ''
   cResult.appendChild(computerChoise)
   result.innerHTML = `${results}`
 }
 function endGame(){
 if(computerPoints == 5){
-  finalResult.innerHTML = "The Computer has 5 points :( <br> Player Lost... The age of man has come to an end."
+  finalResult.innerHTML = "The Computer has 5 points :( <br> Player Lost... The age of men has come to an end."
   finalResult2.innerHTML = "<small>Trust me! Click the button and we will time travel and try again!!</small>"
   finalResult2.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Time Travel!</button>"
 
@@ -141,9 +141,13 @@ if(playerPoints == 5){
   finalResult2.innerHTML += " <br> <button class='restartButton'onclick='window.location.reload()'>Another Chance</button>"
 
 }
+const gameSubtitle = document.querySelectorAll('.gameSubtitle')
 
 if((playerPoints == 5 || computerPoints == 5)){
+for(i=0;i<gameSubtitle.length;i++){
+  gameSubtitle[i].style.display = 'none'
+}
 for(i=0; i<buttons.length; i++){
-  buttons[i].disabled = 'true'
+  buttons[i].style.display = 'none'
 }
 }}

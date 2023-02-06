@@ -6,8 +6,8 @@
     text-align: center;
 }
 .readyButton{
-    height: 10vh;
-    width: 10vw;
+    height: 8vh;
+    width: 18vw;
 }
 .game{
     display:none;
@@ -21,7 +21,8 @@
 }
 .pointsContainer{
     margin: auto;
-    width: 30%;
+    font-size: 120%;
+    width: 60%;
     display: flex;
     justify-content: space-around;
 }
@@ -37,7 +38,7 @@
 
 }
 .handImages{
-    width: 23%;
+    width: 50%;
     height: auto;
 }
 .results{
@@ -54,8 +55,8 @@
 
 }
 .restartButton{
-    height: 5vh;
-    width: 5vw;
+    height: 8vh;
+    width: 18vw;
     margin-top: 1vh;
  
 }
