@@ -33,8 +33,10 @@
     justify-content: space-around;
 }
 .playerChoise{
-    height: 15vh;
-    width: 15vw;
+    font-size: 2em;
+    height: 18vh;
+    width: 12vw;
+    min-width: fit-content;
 
 }
 .handImages{
